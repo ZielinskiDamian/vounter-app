@@ -1,4 +1,4 @@
-const Heading = () => {
-	return <h2>nowa apliakcjia</h2>;
+const Heading = (props) => {
+	return <h2 className={props.classValue}>{ props.newHeding}</h2>;
 };
 export default Heading;

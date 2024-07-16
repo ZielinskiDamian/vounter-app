@@ -1,12 +1,23 @@
+import { useState } from 'react';
+import ButtonPanel from './ButtonsPanel';
 import './Counter.css';
-const Counter = () => {
-	const counter = Math.floor(Math.random() * 100);
+import Display from './Display';
+const Counter = (props) => {
+	const [counter, setCounter] = useState(props.counterInitValue);
+	const updateCounter = (action) => {
+		if (action === 'add') {
+			setCounter(counter + 1);
+		} else if (action === 'reset') {
+			setCounter(props.counterInitValue);
+		} else {
+			setCounter(0);
+		}
+	};
+
 	return (
 		<div className='counter'>
-			<p>Counter: {counter}</p>
-			<div className='buttonPanel'>
-				<button>Add</button>
-			</div>
+			<Display counter={counter} />
+			<ButtonPanel updateCounter={updateCounter} />
 		</div>
 	);
 };
