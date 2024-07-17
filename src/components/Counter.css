@@ -4,7 +4,7 @@
     margin: auto;
 	margin-top: 15px;
 	padding: 100px 300px;
-    background-color: rgb(112, 108, 108);
+    background-color: rgb(85, 85, 85);
 }
 .counter button {
     background-color: blueviolet;
@@ -12,5 +12,9 @@
     cursor: pointer;
 }
 .counter button:hover{
-    background-color: aqua;
+    background-color: rgb(164, 211, 211);
+}
+.clockControl {
+  text-decoration: underline;
+  cursor: pointer;
 }

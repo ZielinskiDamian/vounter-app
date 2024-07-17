@@ -3,6 +3,7 @@ import './App.css';
 
 import Heading from './components/Heading';
 import Counter from './components/Counter';
+import Step from './components/Step';
 function App() {
 	return (
 		<div className='App'>
@@ -13,15 +14,9 @@ function App() {
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
 				<Counter counterInitValue={15} />
+				<Step counetStep={[5,10,15]}/>
 				<Counter />
-				<a
-					className='App-link'
-					href='https://reactjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					Learn React
-				</a>
+				
 			</header>
 		</div>
 	);

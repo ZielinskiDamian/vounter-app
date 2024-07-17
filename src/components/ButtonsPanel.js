@@ -1,4 +1,4 @@
-import './ButtonsPanel.css';
+ 
 const ButtonsPanel = (props) => {
 	return (
 		<div className='buttonPanel'>
