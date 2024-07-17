@@ -9,17 +9,30 @@ const Counter = (props) => {
 	const [counter, setCounter] = useState(props.counterInitValue);
 	const [showClock, setShowClock] = useState(true);
 	// ustawiłem useState
-	const [Step, setStep] = useState(props.counetStep);
+	const [step, setStep] = useState(5);
+	// tworze funkcje
+	const updateStep = (event) => {
+		const newStep = parseInt(event.target.value, 10) || 0;
+		setStep(newStep);
+	};
 
 	const updateCounter = (action) => {
 		if (action === 'add') {
-			// zamiast wartości jedne damłem seStep
-			setCounter(counter + {setStep});
+			// zamiast wartości jeden damłem seStep
+			setCounter(counter + step);
 		} else if (action === 'reset') {
 			setCounter(props.counterInitValue);
 		} else {
 			setCounter(0);
 		}
+	};
+	const Step = (props) => {
+		return (
+			<div className='step'>
+				<h2>Krok</h2>
+				<input type='number' value={step} onChange={updateStep} />
+			</div>
+		);
 	};
 
 	return (
@@ -33,6 +46,7 @@ const Counter = (props) => {
 					pokaż zegar
 				</p>
 			)}
+			<Step counetStep={step} />
 		</div>
 	);
 };

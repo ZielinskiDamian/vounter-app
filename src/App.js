@@ -14,7 +14,7 @@ function App() {
 					Edit <code>src/App.js</code> and save to reload.
 				</p>
 				<Counter counterInitValue={15} />
-				<Step counetStep={[5,10,15]}/>
+				
 				<Counter />
 				
 			</header>
