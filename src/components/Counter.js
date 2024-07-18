@@ -18,21 +18,12 @@ const Counter = (props) => {
 
 	const updateCounter = (action) => {
 		if (action === 'add') {
-			// zamiast wartości jeden damłem seStep
 			setCounter(counter + step);
 		} else if (action === 'reset') {
 			setCounter(props.counterInitValue);
 		} else {
 			setCounter(0);
 		}
-	};
-	const Step = (props) => {
-		return (
-			<div className='step'>
-				<h2>Krok</h2>
-				<input type='number' value={step} onChange={updateStep} />
-			</div>
-		);
 	};
 
 	return (
@@ -46,7 +37,7 @@ const Counter = (props) => {
 					pokaż zegar
 				</p>
 			)}
-			<Step counetStep={step} />
+			<Step step={step} updateStep={updateStep} />{' '}
 		</div>
 	);
 };
